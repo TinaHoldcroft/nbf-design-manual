@@ -1,27 +1,24 @@
 export const accordionData = [
   {
-    title: 'Intro',
+    title: 'intro',
     content:
       <>
-        <a href="#intro">tema</a>
-        <li>tema</li>
-        <li>tema</li>
+        <li><a href="#tema">tema</a></li>
+        <li><a href="#tema">tema</a></li>
       </>
   }, {
-    title: 'Tittel 2',
+    title: 'tittel 2',
     content:
       <>
-        <li>tema</li>
-        <li>tema</li>
-        <li>tema</li>
+        <li><a href="#tema">tema</a></li>
+        <li><a href="#tema">tema</a></li>
       </>
   }, {
-    title: 'Lang Tittel 3',
+    title: 'lang tittel 3',
     content:
       <>
-        <li>tema</li>
-        <li>tema</li>
-        <li>tema</li>
+        <li><a href="#tema">tema</a></li>
+        <li><a href="#tema">tema</a></li>
       </>
   },
 ];
