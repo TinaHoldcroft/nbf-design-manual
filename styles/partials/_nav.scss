@@ -1,0 +1,14 @@
+nav {
+  @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0);
+  height: 100vh;
+  width: 15rem;
+  position: fixed;
+  left: 0;
+  padding: 1rem 1rem 1rem 1rem;
+}
+[light] nav {
+  background-color: rgb(236, 236, 236);
+}
+[dark] nav {
+  background-color: #212121;
+}

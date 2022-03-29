@@ -1,0 +1,13 @@
+.accordion {
+    list-style: none;
+    margin: 1rem;
+}
+.accordion-title {
+    margin: 1em 0;
+    @include flex(row nowrap, flex-start, stretch, auto, flex-start, 1rem);
+    width: 100%;
+}
+.accordion-content {
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0.5em 0);
+    list-style: none;
+}

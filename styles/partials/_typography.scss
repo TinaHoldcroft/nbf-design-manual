@@ -1,0 +1,58 @@
+//[dark]
+//font-size: clamp(2.5em, 4.5vw, 4rem);
+
+//h1
+//h2
+//h3
+//h4
+//h5
+//h6
+//a
+//p
+//li
+//::placeholder, input, textarea
+//button
+
+/*
+// only for screen readers
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+*/
+
+/*
+body,
+a,
+button {
+    color: 
+    ::selection {
+        background: lighten($bluepurple, 30%);
+    }
+}
+*/
+[dark] {
+    body,
+    a,
+    button {
+        color: $white;
+        ::selection {
+            background: lighten($yellow, 30%);
+        }
+    }
+}
+[light] {
+    body,
+    a,
+    button {
+        color: $black;
+        ::selection {
+            background: lighten($yellow, 30%);
+        }
+    }
+}
