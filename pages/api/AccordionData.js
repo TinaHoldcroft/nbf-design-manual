@@ -7,10 +7,10 @@ export const accordionData = [
         <li><a href="#tema">tema</a></li>
       </>
   }, {
-    title: 'tittel 2',
+    title: 'typografi',
     content:
       <>
-        <li><a href="#tema">tema</a></li>
+        <li><a href="#text-hierarchy">text-hierarchy</a></li>
         <li><a href="#tema">tema</a></li>
       </>
   }, {

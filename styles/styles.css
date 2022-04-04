@@ -15,13 +15,35 @@ body {
 }
 
 main {
-  width: calc(100vw - 15rem);
+  width: 100%;
   max-height: 100vh;
   overflow-y: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 1rem;
 }
 
 section {
-  margin: 1rem 2rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 0;
+  margin: 0 4rem;
 }
 
 [light] body {
@@ -37,30 +59,56 @@ img {
   filter: brightness(.8) contrast(1.2);
 }
 */
-/*
-// only for screen readers
+.column {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 0;
+}
+
+.row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 10rem;
+}
+
+@font-face {
+  font-family: DiatypeRegular;
+  src: url("./font/NorgesBlindeforbundDiatype-Regular.woff2") format("woff2"), url("./font/NorgesBlindeforbundDiatype-Regular.woff") format("woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: DiatypeBold;
+  src: url("./font/NorgesBlindeforbundDiatype-Bold.woff2") format("woff2"), url("./font/NorgesBlindeforbundDiatype-Bold.woff") format("woff");
+  font-weight: bold;
+}
 .sr-only:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
-*/
-/*
-body,
-a,
-button {
-    color: 
-    ::selection {
-        background: lighten($bluepurple, 30%);
-    }
-}
-*/
+
 body, button {
-  font-family: sans-serif;
+  font-family: DiatypeRegular, Verdana;
   font-size: 20px;
 }
 
@@ -84,6 +132,30 @@ body, button {
 [light] a ::selection,
 [light] button ::selection {
   background: #fff299;
+}
+
+h1,
+.h1 {
+  font-family: DiatypeBold, Verdana;
+  font-size: 72px;
+}
+
+h2,
+.h2 {
+  font-family: DiatypeBold, Verdana;
+  font-size: 56px;
+}
+
+h3,
+.h3 {
+  font-family: DiatypeBold, Verdana;
+  font-size: 48px;
+}
+
+h4,
+.h4 {
+  font-family: DiatypeBold, Verdana;
+  font-size: 32px;
 }
 
 nav {
@@ -141,8 +213,7 @@ nav {
   align-content: flex-start;
   gap: 0;
   width: 100%;
-  height: 2.25em;
-  font-weight: 600;
+  height: 2em;
   border: none;
 }
 .mode-wrapper .light,
@@ -160,7 +231,6 @@ nav {
   gap: 0;
   height: 100%;
   width: 100%;
-  text-transform: capitalize;
 }
 
 .accordion {
