@@ -10,7 +10,7 @@ html {
 }*/
 body {
     scroll-behavior: smooth;
-    margin-left: 15rem;
+    margin-left: 20rem;
 }
 main {
     width: 100%;
@@ -40,4 +40,8 @@ img {
 }
 .row {
     @include flex(row nowrap, flex-start, stretch, auto, flex-start, 10rem);
+}
+input[type="color"] {
+    height: 6rem;
+    width: 6rem;
 }

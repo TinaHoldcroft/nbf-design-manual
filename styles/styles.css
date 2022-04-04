@@ -11,7 +11,7 @@ html {
 }*/
 body {
   scroll-behavior: smooth;
-  margin-left: 15rem;
+  margin-left: 20rem;
 }
 
 main {
@@ -85,6 +85,11 @@ img {
   align-self: auto;
   align-content: flex-start;
   gap: 10rem;
+}
+
+input[type=color] {
+  height: 6rem;
+  width: 6rem;
 }
 
 @font-face {
@@ -171,7 +176,7 @@ nav {
   align-content: flex-start;
   gap: 0;
   height: 100vh;
-  width: 15rem;
+  width: 20rem;
   position: fixed;
   left: 0;
   padding: 1rem;
