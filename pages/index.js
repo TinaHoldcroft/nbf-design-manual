@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Colours from './colours'
 import Typograpy from './typography'
+import styles from '../styles/Logo.module.scss'
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             </Head>
 
             <main>
+                <img className={styles.logo} src='./logo_black.svg' alt='' />
                 <section id='designmanual'>
                     <h1>Blindeforbundet designmanual</h1>
                     <p>Norsk Blindeforbund skal fremstå enhetlig i intern og ekstern kommunikasjon. Her er retningslinjer og eksempel på bruk. Kun virksomheter vi drifter, eier, har formell tilhørighet eller formelt samarbeid med, kan bruke vår visuelle profil. Alle nye designoppdrag skal godkjennes av kommunikasjonsavdelingen før ferdigstilling.</p>

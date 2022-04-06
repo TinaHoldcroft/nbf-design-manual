@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Theme = () => {
     if (typeof window !== 'undefined') {
-        //console.log('client')
         const DarkModePreset = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const [isActive, setIsActive] = useState(false);
 
         function setMode(set, remove) {
             document.documentElement.setAttribute(set, 'true');
@@ -20,6 +20,7 @@ const Theme = () => {
         }
 
         function toggleTheme() {
+            setIsActive(!isActive)
             if (localStorage.theme === 'dark') {
                 setMode('light', 'dark');
             } else {
@@ -28,15 +29,19 @@ const Theme = () => {
         }
 
         return (
-            <button onClick={toggleTheme} className='mode-wrapper'>
+            <button
+                onClick={toggleTheme}
+                className='mode-wrapper'
+                value={isActive ? 'skift til mørk bakgrunn' : 'skift til lys bakgrunn'}
+                type='button'
+                name='theme toggle'
+            >
+                <span className='float-bg' />
                 <span className='light'>lys</span>
                 <span className='dark'>mørk</span>
             </button>
         )
-    } else {
-        //console.log('server');
-        return null
-    }
+    } else return null;
 }
 
 export default Theme;
