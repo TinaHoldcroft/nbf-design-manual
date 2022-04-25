@@ -1,14 +1,28 @@
-nav {
-  @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0);
-  height: 100vh;
-  width: 20rem;
-  position: fixed;
-  left: 0;
-  padding: 1rem;
-}
+
 [light] nav {
   background-color: rgb(236, 236, 236);
 }
 [dark] nav {
   background-color: #212121;
+}
+@media only screen and (min-width: 600px) {
+  nav {
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0);
+    height: 100vh;
+    width: 20rem;
+    position: fixed;
+    left: 0;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0);
+    height: 12rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+  }
 }

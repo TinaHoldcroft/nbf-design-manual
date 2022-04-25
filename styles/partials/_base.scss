@@ -10,25 +10,30 @@ html {
 }*/
 body {
     scroll-behavior: smooth;
-    margin-left: 20rem;
-    background-color: aquamarine;
 }
+@media only screen and (min-width: 600px) {
+    body {
+        margin-left: 20rem;
+    }
+  }
 main {
     width: 100%;
     max-height: 100vh;
     overflow-y: auto;
-    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 1rem);
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 1em);
 }
 section {
-    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0);
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 1rem);
     margin: 0 4rem;
 }
+div {
+    @include flex(column wrap, flex-start, stretch, auto, flex-start, 1rem);
+}
+
 [light] body {
-    //background: linear-gradient(90deg, #FFF 50%, #000 50%);
     background-color: $white;
 }
 [dark] body {
-    //background: linear-gradient(90deg, #000 50%, #FFF 50%);
     background-color: $black;
 }
 /*
@@ -36,13 +41,3 @@ img {
   filter: brightness(.8) contrast(1.2);
 }
 */
-.column {
-    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 0);
-}
-.row {
-    @include flex(row nowrap, flex-start, stretch, auto, flex-start, 10rem);
-}
-input[type="color"] {
-    height: 6rem;
-    width: 6rem;
-}

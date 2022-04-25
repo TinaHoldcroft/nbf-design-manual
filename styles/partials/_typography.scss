@@ -10,7 +10,6 @@
         url("./font/NorgesBlindeforbundDiatype-Bold.woff") format("woff");
     font-weight: bold;
 }
-
 .sr-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -27,6 +26,7 @@
         color: $white;
         ::selection {
             background: lighten($yellow, 30%);
+            color: $black;
         }
     }
 }
@@ -41,33 +41,46 @@
     }
 }
 h1,
-.h1 {
-    font-family: DiatypeBold, Verdana;
-    //font-size: clamp(2em, 72px, 4vmax);
-    font-size: 72pt;
-    line-height: 1em;
-    //font-size: 48pt;
-}
+.h1,
 h2,
-.h2 {
-    font-family: DiatypeBold, Verdana;
-    font-size: 56px; //pt
-}
+.h2,
 h3,
-.h3 {
-    font-family: DiatypeBold, Verdana;
-    font-size: 48px; //eller 40
-}
+.h3,
 h4,
-.h4 {
+.h4, 
+label {
     font-family: DiatypeBold, Verdana;
-    font-size: 32px; //eller 38
 }
+
 body,
 button {
     font-family: DiatypeRegular, Verdana;
-    font-size: 20px;
+    line-height: 1.25em;
+    font-size: 1em;
 }
-//body large
-//body
-//body small
+
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.25em;
+    &::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+h1 {
+    font-size: clamp(32px, 5.0625em, 5vw); //h2 * 150%
+}
+h2 {
+    font-size: 3.375em; //h3 * 150%
+}
+h3 {
+    font-size: 2.25em; //h4 * 150%
+}
+h4 {
+    font-size: 1.5em; //p * 150%
+}

@@ -11,10 +11,13 @@ html {
 }*/
 body {
   scroll-behavior: smooth;
-  margin-left: 20rem;
-  background-color: aquamarine;
 }
 
+@media only screen and (min-width: 600px) {
+  body {
+    margin-left: 20rem;
+  }
+}
 main {
   width: 100%;
   max-height: 100vh;
@@ -29,7 +32,7 @@ main {
   align-items: stretch;
   align-self: auto;
   align-content: flex-start;
-  gap: 1rem;
+  gap: 1em;
 }
 
 section {
@@ -43,8 +46,22 @@ section {
   align-items: stretch;
   align-self: auto;
   align-content: flex-start;
-  gap: 0;
+  gap: 1rem;
   margin: 0 4rem;
+}
+
+div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 1rem;
 }
 
 [light] body {
@@ -60,39 +77,6 @@ img {
   filter: brightness(.8) contrast(1.2);
 }
 */
-.column {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-self: auto;
-  align-content: flex-start;
-  gap: 0;
-}
-
-.row {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-self: auto;
-  align-content: flex-start;
-  gap: 10rem;
-}
-
-input[type=color] {
-  height: 6rem;
-  width: 6rem;
-}
-
 @font-face {
   font-family: DiatypeRegular;
   src: url("./font/NorgesBlindeforbundDiatype-Regular.woff2") format("woff2"), url("./font/NorgesBlindeforbundDiatype-Regular.woff") format("woff");
@@ -122,6 +106,7 @@ input[type=color] {
 [dark] a ::selection,
 [dark] button ::selection {
   background: #fff299;
+  color: #000000;
 }
 
 [light] body,
@@ -136,53 +121,57 @@ input[type=color] {
 }
 
 h1,
-.h1 {
-  font-family: DiatypeBold, Verdana;
-  font-size: 72pt;
-  line-height: 1em;
-}
-
+.h1,
 h2,
-.h2 {
-  font-family: DiatypeBold, Verdana;
-  font-size: 56px;
-}
-
+.h2,
 h3,
-.h3 {
-  font-family: DiatypeBold, Verdana;
-  font-size: 48px;
-}
-
+.h3,
 h4,
-.h4 {
+.h4,
+label {
   font-family: DiatypeBold, Verdana;
-  font-size: 32px;
 }
 
 body,
 button {
   font-family: DiatypeRegular, Verdana;
-  font-size: 20px;
+  line-height: 1.25em;
+  font-size: 1em;
 }
 
-nav {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-self: auto;
-  align-content: flex-start;
-  gap: 0;
-  height: 100vh;
-  width: 20rem;
-  position: fixed;
-  left: 0;
-  padding: 1rem;
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25em;
+}
+label::first-letter,
+h1::first-letter,
+h2::first-letter,
+h3::first-letter,
+h4::first-letter,
+h5::first-letter,
+h6::first-letter {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: clamp(32px, 5.0625em, 5vw);
+}
+
+h2 {
+  font-size: 3.375em;
+}
+
+h3 {
+  font-size: 2.25em;
+}
+
+h4 {
+  font-size: 1.5em;
 }
 
 [light] nav {
@@ -193,6 +182,47 @@ nav {
   background-color: #212121;
 }
 
+@media only screen and (min-width: 600px) {
+  nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-self: auto;
+    align-content: flex-start;
+    gap: 0;
+    height: 100vh;
+    width: 20rem;
+    position: fixed;
+    left: 0;
+    padding: 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-self: auto;
+    align-content: flex-start;
+    gap: 0;
+    height: 12rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+  }
+}
 .accordion {
   list-style: none;
   margin: 1rem;
@@ -238,6 +268,61 @@ nav {
   text-transform: capitalize;
 }
 
+.color-box-wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.color-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 2rem;
+}
+.color-box input {
+  cursor: pointer;
+  border: none;
+  height: 7rem;
+  width: 12rem;
+}
+.color-box input:focus {
+  outline: 2px solid #ffdf00;
+  outline-offset: 6px;
+}
+.color-box label {
+  font-size: 1.5em;
+}
+.color-box .txt {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 0;
+}
+
 .mode-wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -251,7 +336,7 @@ nav {
   align-content: flex-start;
   gap: 0;
   width: 100%;
-  height: 1.75em;
+  height: 1.75rem;
   border: none;
   background-color: #ffffff;
 }
@@ -269,7 +354,7 @@ nav {
   align-content: flex-start;
   gap: 0;
   z-index: 2;
-  height: 100%;
+  height: 1.75rem;
   width: 100%;
   text-transform: uppercase;
   font-size: 0.75em;
@@ -282,8 +367,8 @@ nav {
 .float-bg {
   position: absolute;
   background-color: #ffdf00;
-  width: 9rem;
-  height: 1.75em;
+  width: 46%;
+  height: 1.75rem;
   z-index: 1;
   left: 0;
 }
@@ -300,7 +385,7 @@ nav {
   color: #ffffff;
 }
 [dark] .float-bg {
-  margin-left: 9.98rem;
+  margin-left: 49%;
   transition: margin 0.5s;
 }
 

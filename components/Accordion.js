@@ -9,7 +9,11 @@ const Accordion = ({ title, content }) => {
                 {isActive ? <>&minus;</> : <>+</>}
                 <span>{title}</span>
             </li>
-            {isActive && <ul className="accordion-content">{content}</ul>}
+            {isActive &&
+                <ul className="accordion-content">
+                    {content}
+                </ul>
+            }
         </>
     );
 };
