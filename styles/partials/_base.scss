@@ -11,11 +11,7 @@ html {
 body {
     scroll-behavior: smooth;
 }
-@media only screen and (min-width: 600px) {
-    body {
-        margin-left: 20rem;
-    }
-  }
+
 main {
     width: 100%;
     max-height: 100vh;
@@ -23,13 +19,12 @@ main {
     @include flex(column nowrap, flex-start, stretch, auto, flex-start, 1em);
 }
 section {
-    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 1rem);
-    margin: 0 4rem;
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 3rem);
+    margin: 0 1rem;
 }
 div {
     @include flex(column wrap, flex-start, stretch, auto, flex-start, 1rem);
 }
-
 [light] body {
     background-color: $white;
 }
@@ -41,3 +36,12 @@ img {
   filter: brightness(.8) contrast(1.2);
 }
 */
+@media only screen and (min-width: 600px) {
+    body {
+        margin-left: 30rem;
+    }
+    section {
+        margin: 2rem 4rem;
+        max-width: 65ch;
+    }
+}

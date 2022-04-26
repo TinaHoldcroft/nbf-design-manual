@@ -1,10 +1,9 @@
-@import 'partials/varibles.scss';
-@import 'partials/mixins.scss';
+@import "partials/varibles.scss";
+@import "partials/mixins.scss";
+@import "partials/base.scss";
 
-@import 'partials/base.scss';
-@import 'partials/typography.scss';
-@import 'partials/nav.scss';
-@import 'partials/accordion.scss';
-@import 'partials/color-palette.scss';
+@import "partials/typography.scss";
+@import "partials/nav.scss";
+@import "partials/color-palette.scss";
 
-@import 'partials/buttons/theme.scss';
+@import "partials/buttons/theme.scss";

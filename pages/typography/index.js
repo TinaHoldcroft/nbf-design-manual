@@ -2,7 +2,7 @@ export default function Typography() {
     return (
         <>
             <section id='typografi'>
-                <h2>typography</h2>
+                <h2>Typography</h2>
                 <div>
                     <h3>Intro</h3>
                     <p>Blindeforbundet har lang tradisjon med universell utforming og holder hele tiden takt med nye krav. Men noe av det viktigste vi gjør er å lytte til medlemmene og eksperter tilknyttet vår organisasjon. Typografi og bruken av den er et av de viktigste verktøyene vi har for å oppnå tilgjengelig kommunikasjon for alle.</p>

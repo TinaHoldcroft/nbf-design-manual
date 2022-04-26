@@ -8,7 +8,7 @@ export const accordionData = [
         <li><a href="#verdier">våre verdier</a></li>
       </>
   }, {
-    title: 'verktøykassen',
+    title: 'verktøykasse',
     content:
       <>
         <li><a href="#logo"></a>logo</li>

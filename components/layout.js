@@ -1,5 +1,6 @@
 import Nav from "./nav";
 //import Footer from "./footer";
+import Theme from './Theme'
 
 const Layout = ({ children }) => {
 
@@ -8,6 +9,7 @@ const Layout = ({ children }) => {
             <Nav />
             <main>
                 {children}
+                <Theme />
             </main>
             {/*<Footer />*/}
         </>

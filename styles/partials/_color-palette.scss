@@ -6,10 +6,9 @@
     @include flex(row nowrap, flex-start, stretch, auto, flex-start, 2rem);
     input {
         cursor: pointer;
-
         border: none;
-        height: 7rem;
-        width: 12rem;
+        height: 9rem;
+        width: 14rem;
         &:focus {
             outline: 2px solid $yellow;
             outline-offset: 6px;

@@ -34,9 +34,7 @@ const Theme = () => {
                 type='button'
                 name='theme toggle'
             >
-                <span className='float-bg' />
-                <span className='light'>lys</span>
-                <span className='dark'>mørk</span>
+                <i className='fa-solid fa-circle-half-stroke'/>
             </button>
         )
     } else return null;

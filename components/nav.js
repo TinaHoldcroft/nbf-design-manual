@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import Theme from './Theme'
-import Accordion from './Accordion';
-import { accordionData } from '../pages/api/AccordionData';
+import Accordion from './Accordion'
+import { accordionData } from '../pages/api/AccordionData'
+//import styles from '../styles/Logo.module.scss'
 
 const Nav = () => {
 
     return (
         <nav className='navbar'>
-            <Theme />
+            {/*<img className={`logo ${styles.logo}`} src='./logo_black.svg' alt='' />*/}
             <div>
                 <ul className="accordion">
                     {accordionData.map(({ title, content }) => (
