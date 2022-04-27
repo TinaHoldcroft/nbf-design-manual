@@ -102,25 +102,21 @@ img {
 }
 
 [dark] body,
-[dark] a,
-[dark] button {
+[dark] a {
   color: #ffffff;
 }
 [dark] body ::selection,
-[dark] a ::selection,
-[dark] button ::selection {
+[dark] a ::selection {
   background: #ffdf00;
   color: #000000;
 }
 
 [light] body,
-[light] a,
-[light] button {
+[light] a {
   color: #000000;
 }
 [light] body ::selection,
-[light] a ::selection,
-[light] button ::selection {
+[light] a ::selection {
   background: #ffdf00;
 }
 
@@ -360,6 +356,7 @@ h4 {
   padding: 0 1rem;
   background-color: #ffdf00;
   border: solid 3px #ffdf00;
+  color: #000000;
 }
 .primary ::first-letter {
   text-transform: capitalize;
@@ -383,6 +380,7 @@ h4 {
   border-radius: 30px;
   height: 56px;
   padding: 0 1.5rem;
+  color: #000000;
 }
 .secondary ::first-letter {
   text-transform: capitalize;

@@ -21,8 +21,7 @@
 }
 [dark] {
     body,
-    a,
-    button {
+    a {
         color: $white;
         ::selection {
             background: $yellow;
@@ -32,8 +31,7 @@
 }
 [light] {
     body,
-    a,
-    button {
+    a {
         color: $black;
         ::selection {
             background: $yellow;
