@@ -10,20 +10,20 @@ html {
 }*/
 body {
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; 
 }
 
 main {
     width: 100%;
     max-height: 100vh;
     overflow-y: auto;
-    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 1em);
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 2.5em);
 }
 section {
-    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 3rem);
-    margin: 0 1rem;
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 2rem);
 }
 div {
-    @include flex(column wrap, flex-start, stretch, auto, flex-start, 1rem);
+    @include flex(column wrap, flex-start, stretch, auto, flex-start, 1.5em);
 }
 [light] body {
     background-color: $white;
@@ -41,7 +41,7 @@ img {
         margin-left: 30rem;
     }
     section {
-        margin: 2rem 4rem;
-        max-width: 65ch;
+        max-width: 680px; //tekstspalter bør ligge mellom 60–80 tegn (bokstaver og mellomrom).
+
     }
 }

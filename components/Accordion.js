@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const Accordion = ({ title, content }) => {
     const [isActive, setIsActive] = useState(false);
@@ -6,7 +6,7 @@ const Accordion = ({ title, content }) => {
     return (
         <>
             <li
-                className="accordion-title"
+                className='accordion-title'
                 onClick={() => setIsActive(!isActive)}
             >
                 {isActive ?
@@ -17,7 +17,7 @@ const Accordion = ({ title, content }) => {
                 <span>{title}</span>
             </li>
             {isActive &&
-                <ul className="accordion-content">
+                <ul className='accordion-content'>
                     {content}
                 </ul>
             }

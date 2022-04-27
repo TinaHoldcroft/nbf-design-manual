@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Brand from './brand'
 import Colours from './colours'
+import UI from './UI'
 import Typograpy from './typography'
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Design Manual | NBf</title>
-                <meta name="description" content="Design Manual for Norges Blindeforbund" />
+                <meta name='description' content='Design Manual for Norges Blindeforbund' />
             </Head>
 
             <section id='designmanual'>
@@ -19,6 +20,7 @@ export default function Home() {
             <Brand />
             <Colours />
             <Typograpy />
+            <UI/>
         </>
     )
 }

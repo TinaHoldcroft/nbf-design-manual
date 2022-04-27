@@ -1,0 +1,21 @@
+.primary {
+    border-radius: 30px;
+    height: 56px; //48px mob
+    padding: 0 1rem;
+    background-color: $yellow;
+    border: solid 3px $yellow;
+    ::first-letter {
+        text-transform: capitalize;
+    }
+}
+.primary.hover {
+    border: solid 3px $black;
+}
+.primary.focus {
+    border: solid 3px $black;
+}
+.primary.disabled {
+    border: solid 3px $black25;
+    background-color: $black25;
+    color: $black65;
+}

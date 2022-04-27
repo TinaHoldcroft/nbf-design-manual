@@ -5,7 +5,7 @@ export default function Brand() {
         <>
             <Head>
                 <title>Design Manual | NBf</title>
-                <meta name="description" content="Design Manual for Norges Blindeforbund" />
+                <meta name='description' content='Design Manual for Norges Blindeforbund' />
             </Head>
 
             <section id='merkevaren'>

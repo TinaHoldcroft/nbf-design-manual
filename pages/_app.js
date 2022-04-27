@@ -2,13 +2,13 @@ import '../styles/styles.css'
 import Layout from '../components/layout';
 import Head from 'next/head'
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
 
   return (
 
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
       <Layout>
@@ -20,4 +20,4 @@ function MyApp({ Component, pageProps }) {
   )
 }
 
-export default MyApp
+export default App

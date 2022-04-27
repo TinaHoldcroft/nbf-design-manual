@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Typography() {
     return (
         <>
@@ -37,8 +39,8 @@ export default function Typography() {
                 <div>
                     <h3>Kontakt for nedlasting av Diatype</h3>
                     <h4>Kontaktperson</h4>
-                    <a href="mailto:mia.jacobsen@blindeforbundet.no">mia.jacobsen@blindeforbundet.no</a>
-                    <a href="mailto:terje.mork@blindeforbundet.no">terje.mork@blindeforbundet.no</a>
+                    <Link href='mailto:mia.jacobsen@blindeforbundet.no'>mia.jacobsen@blindeforbundet.no</Link>
+                    <Link href='mailto:terje.mork@blindeforbundet.no'>terje.mork@blindeforbundet.no</Link>
                 </div>
             </section>
         </>
